@@ -21,4 +21,4 @@ object<-function(m,n){
   return(sd%*%EYZ)
 }
 
-object(10,1000)
+object(100,1000)
