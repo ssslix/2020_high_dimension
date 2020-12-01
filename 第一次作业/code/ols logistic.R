@@ -1,4 +1,4 @@
-l1<-function(coef,X,y,n,EXY){
+l<-function(coef,X,y,n,EXY){
   f1=0
   f2=0
   for(i in 1:n){
@@ -12,7 +12,7 @@ NEWTON<-function(coef,X,y,n,EXY){
   eta=1e-10
   for(i in 1:n){
     a=coef
-    b=coef-l1(coef,X,y,n,EXY)
+    b=coef-l(coef,X,y,n,EXY)
     if(abs(a-b)<=eta){
       break;
     }

@@ -1,4 +1,5 @@
-l1<-function(coef,X,y,n,EXY){
+#计算目标函数对c一阶偏导与二阶偏导的比值
+l<-function(coef,X,y,n,EXY){
   f1=0
   f2=0
   for(i in 1:n){
@@ -7,12 +8,12 @@ l1<-function(coef,X,y,n,EXY){
   }
   return(f1/f2)
 }
-
+#牛顿迭代主体部分
 NEWTON<-function(coef,X,y,n,EXY){
   eta=1e-10
   for(i in 1:n){
     a=coef
-    b=coef-l1(coef,X,y,n,EXY)
+    b=coef-l(coef,X,y,n,EXY)
     if(abs(a-b)<=eta){
       break;
     }
@@ -24,6 +25,7 @@ NEWTON<-function(coef,X,y,n,EXY){
   return(c(coef))
 }
 set.seed(1)
+#初始化beta，设定样本维度，大小，并给一个c的初值进行迭代
 object<-function(m,n,coef){
   beta = rep(1,m)
   X=matrix(nrow=m,ncol=n)

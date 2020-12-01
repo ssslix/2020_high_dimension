@@ -1,13 +1,15 @@
+##主体函数x维度m,样本n
 object<-function(m,n){
-  beta = rep(1,m)
-  X=matrix(nrow=m,ncol=n)
+  beta = rep(1,m)#初始化beta 设为m维全为1
+  X=matrix(nrow=m,ncol=n)#初始化样本
   y = rep(0,n)
-  for(j in 1:n)
+  for(j in 1:n)#按正态分布生成数据y
   {
     X[,j]=runif(m,min=-10,max=10)
     lambda=beta%*%X[,j]
     y[j]=rnorm(1,lambda,1)+rnorm(1,1,0.1)
   }
+  #标准化X得到Z，中心化y
   mu=rowMeans(X)
   var=cov(t(X-mu))
   lamda =solve(eigen(var)$vectors)%*%var%*%(eigen(var)$vectors)
@@ -16,6 +18,7 @@ object<-function(m,n){
   sd=solve(var_sqrt)
   Z=sd%*%(X-mu)
   y=y-mean(y)
+  #计算EYZ,最后返回sd%*%EYZ估计betahat
   EYZ= Z%*%y/n
   EYZ
   return(sd%*%EYZ)
