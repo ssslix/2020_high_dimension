@@ -24,15 +24,15 @@ NEWTON<-function(coef,X,y,n,EXY){
   }
   return(c(coef))
 }
-set.seed(1)
+
 #初始化beta，设定样本维度，大小，并给一个c的初值进行迭代
-object<-function(m,n,coef){
-  beta = rep(1,m)
-  X=matrix(nrow=m,ncol=n)
+object<-function(p,n,coef){
+  beta = rep(1,p)
+  X=matrix(nrow=p,ncol=n)
   y = rep(0,n)
   for(j in 1:n)
   {
-    X[,j]=runif(m,min=-1,max=1)
+    X[,j]=runif(p,min=-1,max=1)
     lambda=exp(beta%*%X[,j])
     y[j]=rpois(1,lambda)+rnorm(1,0,1)
   }
@@ -43,4 +43,4 @@ object<-function(m,n,coef){
   return(EXY*C)
 }
 
-object(5,100,2)
+object(5,500,2)

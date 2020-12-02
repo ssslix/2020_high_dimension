@@ -24,13 +24,13 @@ NEWTON<-function(coef,X,y,n,EXY){
   return(c(coef))
 }
 set.seed(1)
-object<-function(m,n,coef){
-  beta = rep(1,m)
-  X=matrix(nrow=m,ncol=n)
+object<-function(p,n,coef){
+  beta = rep(1,p)
+  X=matrix(nrow=p,ncol=n)
   y = rep(0,n)
   for(j in 1:n)
   {
-    X[,j]=runif(m,min=-1,max=1)
+    X[,j]=runif(p,min=-1,max=1)
     lambda=exp(beta%*%X[,j])/(1+exp(beta%*%X[,j]))
     y[j]=rbinom(1,lambda)+rnorm(1,0,1)
   }

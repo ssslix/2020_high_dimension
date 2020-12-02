@@ -1,11 +1,11 @@
-##主体函数x维度m,样本n
-object<-function(m,n){
-  beta = rep(1,m)#初始化beta 设为m维全为1
-  X=matrix(nrow=m,ncol=n)#初始化样本
+##主体函数x维度p,样本n
+object<-function(p,n){
+  beta = rep(1,p)#初始化beta 设为m维全为1
+  X=matrix(nrow=p,ncol=n)#初始化样本
   y = rep(0,n)
   for(j in 1:n)#按正态分布生成数据y
   {
-    X[,j]=runif(m,min=-10,max=10)
+    X[,j]=runif(p,min=-10,max=10)
     lambda=beta%*%X[,j]
     y[j]=rnorm(1,lambda,1)+rnorm(1,1,0.1)
   }

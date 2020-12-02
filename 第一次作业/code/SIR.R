@@ -1,17 +1,17 @@
 #object<-function(p,m,n){
-#m初始化x维数,p初始化t(beta)作用在X上用的有效维度 n样本量
-p=2
-m=4
+#p初始化x维数,q初始化t(beta)作用在X上用的有效维度 n样本量
+q=2
+p=10
 n=1000
 h=ceiling(sqrt(n))
 #初始化beta矩阵m*p维
-beta  <- diag(rep(1,m))[,1:p]##是个单位阵，取前p个行向量
-X=matrix(nrow=m,ncol=n)
+beta  <- diag(rep(1,m))[,1:q]##是个单位阵，取前p个行向量
+X=matrix(nrow=p,ncol=n)
 y = rep(0,n)
 for(j in 1:n)
 {
   #按标准正态分布生成每个样本点Xi的每个维度的值 并按不同模型生成y
-  X[,j]=rnorm(m,0,1)
+  X[,j]=rnorm(p,0,1)
   lambda1=sum(t(beta)%*%X[,j])
   lambda2=exp(sum(t(beta)%*%X[,j]))
   lambda3=exp(sum(t(beta)%*%X[,j]))/(1+exp(sum(t(beta)%*%X[,j])))
@@ -51,11 +51,11 @@ for(i in 1:h){
 }
 M=g%*%diag(prob)%*%t(g)
 alpha=eigen(M)$vector
-beta_hat=sd%*%alpha[,1:p]
+
 beta_hat
 #得到beta矩阵估计值
-# beta_hat1=sd%*%alpha1[,1:p]
-# beta_hat2=sd%*%alpha2[,1:p]
+# beta_hat1=sd%*%alpha1[,1:q]
+# beta_hat2=sd%*%alpha2[,1:q]
 # 
 # ZZ1=t(beta_hat1)%*%X
 # ZZ2=t(beta_hat2)%*%X
@@ -65,10 +65,25 @@ beta_hat
 # span_beta=qr.Q(qr(beta))
 # span_beta_hat1=qr.Q(qr(beta_hat1))
 # ##计算距离
-# dis=p
-# for(i in 1:p){
+# dis=q
+# for(i in 1:q){
 #   dis=dis-sum((t(span_beta[,i])%*%span_beta_hat1)^2)
 # }
 # dis=sqrt(dis)
 # #return(dis)
 # #}
+##估计原本beta对应的q的值
+fixq<-function(eigenvalue,n,p){
+  cn=1/n^(1/3)
+  t=rep(0,p-1)
+  q_hat=0
+  for(i in 1:(p-1)){
+    if((eigenvalue[i+1]+cn)/(eigenvalue[i]+cn)<=0.5)
+    {
+      q_hat=i
+    }
+  }
+  return(q_hat)
+}
+q_hat=fixq(eigen(M)$value,n,m)
+beta_hat=sd%*%alpha[,1:q_hat]
