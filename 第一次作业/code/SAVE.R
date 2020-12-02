@@ -2,9 +2,9 @@
 #p初始化x维数,q初始化t(beta)作用在X上用的有效维度 n样本量
 q=2
 p=10
-n=1000
-h=ceiling(sqrt(n))
-#初始化beta矩阵m*p维
+n=200
+h=10
+#初始化beta矩阵p*q维
 beta  <- diag(rep(1,p))[,1:q]##是个单位阵，取前p个行向量
 X=matrix(nrow=p,ncol=n)
 y = rep(0,n)
@@ -18,7 +18,7 @@ for(j in 1:n)
   y[j]=rnorm(1,lambda1,1)+rnorm(1,1,0.1) #正态
   #y[j]=rpois(1,lambda2)+rnorm(1,0,0.1)   #泊松
   #y[j]=rbinom(1,1,lambda3)++rnorm(1,0,0.1)  #logistic
-  y[j]=sin(2*c(t(beta[,1])%*%X[,j]))+sin(c(t(beta[,2])%*%X[,j]))+rnorm(1,1,0.1)
+  y[j]=cos(2*c(t(beta[,1])%*%X[,j]))+cos(c(t(beta[,2])%*%X[,j]))+rnorm(1,1,0.1)
   #y[j]=rnorm(1,2*X[2,j],1)+rnorm(1,X[1,j],1)+rnorm(1,0,0.1) 
   #y[j]=exp(X[1,j])+exp(X[2,j])+rnorm(1,0,0.1) 
   #y[j]=rpois(1,exp(X[1,j]))+rpois(1,exp(X[2,j]))+rnorm(1,0,0.1)
@@ -43,13 +43,13 @@ for(i in 1:(h-2)){
 }
 y1[(pn*(h-1)+1):n]=h
 #计算M
-g=matrix(nrow=p,ncol=h)
+zmean=matrix(nrow=p,ncol=h)
+M=matrix(0,nrow=p,ncol=p)
 prob=rep(0,h)
 for(i in 1:h){ 
   prob[i]=length(y1[y1==i])/n
- g[,i]=apply(Zord[,y1==i],1,mean)
+  M= M+prob[i]*(diag(p)-var(t(Zord[,y1==i])))%*%(diag(p)-var(t(Zord[,y1==i])))
 }
-M=g%*%diag(prob)%*%t(g)
 alpha=eigen(M)$vector
 
 #得到beta矩阵估计值
