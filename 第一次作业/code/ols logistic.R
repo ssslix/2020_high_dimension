@@ -10,7 +10,7 @@ l<-function(coef,X,y,n,EXY){
 
 NEWTON<-function(coef,X,y,n,EXY){
   eta=1e-10
-  for(i in 1:n){
+  for(i in 1:100){
     a=coef
     b=coef-l(coef,X,y,n,EXY)
     if(abs(a-b)<=eta){
