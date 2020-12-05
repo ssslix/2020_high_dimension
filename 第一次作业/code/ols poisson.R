@@ -1,4 +1,4 @@
-#����Ŀ�꺯����cһ��ƫ�������ƫ���ı�ֵ
+#计算目标函数对c一阶偏导与二阶偏导的比值
 l<-function(coef,X,y,n,EXY){
   f1=0
   f2=0
@@ -8,7 +8,7 @@ l<-function(coef,X,y,n,EXY){
   }
   return(f1/f2)
 }
-#ţ�ٵ������岿��
+#牛顿迭代主体部分
 NEWTON<-function(coef,X,y,n,EXY){
   eta=1e-10
   for(i in 1:100){
@@ -25,7 +25,7 @@ NEWTON<-function(coef,X,y,n,EXY){
   return(c(coef))
 }
 
-#��ʼ��beta���趨����ά�ȣ���С������һ��c�ĳ�ֵ���е���
+#初始化beta，设定样本维度，大小，并给一个c的初值进行迭代
 object<-function(p,n,coef){
   beta = rep(1,p)
   X=matrix(nrow=p,ncol=n)

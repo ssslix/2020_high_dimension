@@ -1,21 +1,21 @@
 #object<-function(p,m,n){
-#p³õÊ¼»¯xÎ¬Êý,q³õÊ¼»¯t(beta)×÷ÓÃÔÚXÉÏÓÃµÄÓÐÐ§Î¬¶È nÑù±¾Á¿
+#påˆå§‹åŒ–xç»´æ•°,qåˆå§‹åŒ–t(beta)ä½œç”¨åœ¨Xä¸Šç”¨çš„æœ‰æ•ˆç»´åº¦ næ ·æœ¬é‡
 q=2
 p=4
 n=10000
-#³õÊ¼»¯beta¾ØÕóp*qÎ¬
-beta  <- diag(rep(1,p))[,1:q]##ÊÇ¸öµ¥Î»Õó£¬È¡Ç°p¸öÐÐÏòÁ¿
+#åˆå§‹åŒ–betaçŸ©é˜µp*qç»´
+beta  <- diag(rep(1,p))[,1:q]##æ˜¯ä¸ªå•ä½é˜µï¼Œå–å‰pä¸ªè¡Œå‘é‡
 X=matrix(nrow=p,ncol=n)
 y = rep(0,n)
 for(j in 1:n)
 {
-  #°´±ê×¼ÕýÌ¬·Ö²¼Éú³ÉÃ¿¸öÑù±¾µãXiµÄÃ¿¸öÎ¬¶ÈµÄÖµ ²¢°´²»Í¬Ä£ÐÍÉú³Éy
+  #æŒ‰æ ‡å‡†æ­£æ€åˆ†å¸ƒç”Ÿæˆæ¯ä¸ªæ ·æœ¬ç‚¹Xiçš„æ¯ä¸ªç»´åº¦çš„å€¼ å¹¶æŒ‰ä¸åŒæ¨¡åž‹ç”Ÿæˆy
   X[,j]=rnorm(p,0,1)
   lambda1=sum(t(beta)%*%X[,j])
   lambda2=exp(sum(t(beta)%*%X[,j]))
   lambda3=exp(sum(t(beta)%*%X[,j]))/(1+exp(sum(t(beta)%*%X[,j])))
-  #y[j]=rnorm(1,lambda1,1)+rnorm(1,1,0.1) #ÕýÌ¬
-  #y[j]=rpois(1,lambda2)+rnorm(1,0,0.1)   #²´ËÉ
+  #y[j]=rnorm(1,lambda1,1)+rnorm(1,1,0.1) #æ­£æ€
+  #y[j]=rpois(1,lambda2)+rnorm(1,0,0.1)   #æ³Šæ¾
   #y[j]=rbinom(1,1,lambda3)++rnorm(1,0,0.1)  #logistic
   y[j]=cos(2*c(t(beta[,1])%*%X[,j]))+cos(c(t(beta[,2])%*%X[,j]))+rnorm(1,1,0.1)
   #y[j]=rnorm(1,2*X[2,j],1)+rnorm(1,X[1,j],1)+rnorm(1,0,0.1) 
@@ -24,7 +24,7 @@ for(j in 1:n)
   #y[j]=2*X[2,j]+X[1,j]
   #y[j]=exp(X[1,j])/(1+exp(X[1,j]))+exp(X[2,j])/(1+exp(X[2,j]))
 }
-#ÖÐÐÄ»¯±ê×¼»¯
+#ä¸­å¿ƒåŒ–æ ‡å‡†åŒ–
 mu=rowMeans(X)
 var=cov(t(X-mu))
 lamda =solve(eigen(var)$vectors)%*%var%*%(eigen(var)$vectors)
@@ -34,7 +34,7 @@ sd=solve(var_sqrt)
 Z=sd%*%(X-mu)
 y=y-mean(y)
 y=c(y)
-#¼ÆËãH1£¬H2
+#è®¡ç®—H1ï¼ŒH2
 H1=matrix(0,nrow=p,ncol=p)
 H2=matrix(0,nrow=p,ncol=p)
 a=Z%*%y/n
@@ -42,18 +42,18 @@ H1=t(t(Z)*(y-mean(y)))%*%t(Z)/n
 H2=t(t(Z)*(y-mean(y)-c(t(a)%*%Z)))%*%t(Z)/n
 alpha1=eigen(H1%*%H1)$vectors
 alpha2=eigen(H2%*%H2)$vectors
-#µÃµ½beta¾ØÕó¹À¼ÆÖµ
+#å¾—åˆ°betaçŸ©é˜µä¼°è®¡å€¼
 beta_hat1=sd%*%alpha1[,1:q]
 beta_hat2=sd%*%alpha2[,1:q]
 
 ZZ1=t(beta_hat1)%*%X
 ZZ2=t(beta_hat2)%*%X
 
-###¼ÆËã ¹À¼ÆµÄbetaºÍÕæÊµbetaÕÅ³É¿Õ¼äµÄ¾àÀë
-##°ÑbetaºÍbeta_hatÊ©ÃÜÌØÕý½»»¯
+###è®¡ç®— ä¼°è®¡çš„betaå’ŒçœŸå®žbetaå¼ æˆç©ºé—´çš„è·ç¦»
+##æŠŠbetaå’Œbeta_hatæ–½å¯†ç‰¹æ­£äº¤åŒ–
 span_beta=qr.Q(qr(beta))
 span_beta_hat1=qr.Q(qr(beta_hat1))
-##¼ÆËã¾àÀë
+##è®¡ç®—è·ç¦»
 dis=q
 for(i in 1:q){
   dis=dis-sum((t(span_beta[,i])%*%span_beta_hat1)^2)
