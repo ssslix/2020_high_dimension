@@ -1,0 +1,40 @@
+\subsection{理论依据}
+\begin{align*}
+    &span(E[I_p-Var(X|Y)]^2) \subseteq S_{Y|X}
+\end{align*}
+\subsection{样本计算流程}
+\begin{enumerate}
+    \item 将$X_1,\dots,X_n$标准化为$Z_1,\dots,Z_n$
+    \item 将$[a,b]=[min{Y_i}_{i=1}^n,max{Y_i}_{i=1}^n]$划分为$k$个区间，得到$\widetilde{Y}_i$；由此计算$\bar{\mu}_i=\frac{1}{\#\{I_i\}}\sum_{Y_j\in I_i}Z_j$
+    \item 计算条件方差估计量$\hat{\Sigma}_i=\sum_{i=1}^k\frac{1}{\#I_i}\sum_{Y_j\in I_i}(Z_j-\hat{\mu}_i)(Z_j-\hat{\mu}_i)^T$
+    \item 计算协方差矩阵估计量
+    \begin{align*}
+        \widetilde{M}&=\sum_{i=1}^kE_n[I(Y\in I_i)] [I_{p\times p}-Var(Z|\widetilde{Y}=i)]^2 \\
+        &=\sum_{i=1}^k\frac{\#\{I_i\}}{n}(I_{p\times p}-\hat{\Sigma}_i)^2
+    \end{align*}
+    \item 计算$\widetilde{M}$的前q个特征向量$u_1,\dots,u_n$，则对$S_{Y|X}$中向量的估计为$v_k=\hat{\Sigma}_{X}^{-1/2}u_k,k=1,\dots,q$
+    
+\end{enumerate}
+在实际计算中,将$[Y_{(1),Y_(n)}]$划分为$10$个区间.
+\subsection{线性回归模型}
+设定样本量为1000,降维维数由$10-20$,判断其降维效果.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/norm_save.eps}
+    \caption{线性回归下维度对降维效果的影响}
+\end{figure}
+
+
+\subsection{cos函数生成的数据的降维计算}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/cos_save.eps}
+    \caption{cos函数生成的数据下维度对降维效果的影响(二维)}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/compare_save_one.eps}
+    \caption{cos函数与sin函数生成的数据下维度对降维效果的影响(一维)}
+\end{figure}
+

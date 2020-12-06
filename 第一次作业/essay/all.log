@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.26)  6 DEC 2020 00:39
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.26)  6 DEC 2020 18:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -949,17 +949,45 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 \tf@toc=\write5
 \openout5 = `all.toc'.
 
- [2] [3] (./all.aux)
+ [2] (./pHd.tex
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 1.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 19.
+File: image/norm.eps Graphic file (type eps)
+<image/norm.eps>
+File: image/pois_phd.eps Graphic file (type eps)
+<image/pois_phd.eps>
+File: image/logit_phd.eps Graphic file (type eps)
+<image/logit_phd.eps>
+File: image/cos_phd.eps Graphic file (type eps)
+<image/cos_phd.eps>
+) (./sir.tex [3] [4] [5]
+File: image/pois_sir.eps Graphic file (type eps)
+<image/pois_sir.eps>
+File: image/sin_sir.eps Graphic file (type eps)
+<image/sin_sir.eps>
+File: image/compare_sir.eps Graphic file (type eps)
+<image/compare_sir.eps>
+) (./save.tex [6] [7]
+File: image/norm_save.eps Graphic file (type eps)
+<image/norm_save.eps>
+File: image/cos_save.eps Graphic file (type eps)
+<image/cos_save.eps>
+ [8]
+File: image/compare_save_one.eps Graphic file (type eps)
+<image/compare_save_one.eps>
+) [9] [10] (./all.aux)
 Package rerunfilecheck Info: File `all.out' has not changed.
-(rerunfilecheck)             Checksum: 099E7CB92A1036CC7E5FF6DC010800A1;333.
+(rerunfilecheck)             Checksum: 2E7CE20ACAFC088DDA4845AA26EDAAF6;1891.
  ) 
 Here is how much of TeX's memory you used:
- 20937 strings out of 477453
- 393211 string characters out of 5840417
- 978921 words of memory out of 5000000
- 40068 multiletter control sequences out of 15000+600000
- 559713 words of font info for 60 fonts, out of 8000000 for 9000
+ 21063 strings out of 477453
+ 396330 string characters out of 5840417
+ 990921 words of memory out of 5000000
+ 40163 multiletter control sequences out of 15000+600000
+ 569991 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,6n,135p,382b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,9n,135p,382b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on all.pdf (3 pages).
+Output written on all.pdf (10 pages).
