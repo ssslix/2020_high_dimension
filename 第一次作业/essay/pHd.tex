@@ -1,7 +1,9 @@
 \subsection{原理}
 \begin{align*}
     &H_1 = \Sigma_{XX}^{-1} \Sigma_{XXY} \Sigma_{XX}^{-1} \\
-    &span(H_1) \subseteq S_{Y|X}
+    &span(H_1) \subseteq S_{Y|X} \\
+    &H_2 = E[(Y-E(XY)^TX)XX^T] \\
+    &span(H_2) \subseteq S_{Y|X}
 \end{align*}
 \subsection{样本计算流程}
 \begin{enumerate}
@@ -10,6 +12,9 @@
     \item 计算$\hat{\Sigma}_{ZZY}$的前$q$个特征向量$u_1,\dots,u_n$，则对$S_{Y|X}$中向量的估计为$v_k=\hat{\Sigma}_{XX}^{-1/2}u_k,k=1,\dots,q$
 \end{enumerate}
 
+\subsection{度量两空间间的距离}
+采用$L_2-Hausdorff$子空间距离度量$m$维子空间$U$与$n$维子空间$V$之间的距离：
+$$d(U,V)=max(\vec{d}(U,V),\vec{d}(V,U))=\sqrt{max(m,n)-\sum_{i=1}^m\sum_{j=1}^n(u_i^Tv_j)^2}$$
 
 \subsection{线性回归}
 设定样本量为1000,样本$X$维度为$5$,降维后维度为$2$.一次的计算结果$H_1,H_2$如下表所示
@@ -32,7 +37,7 @@
 接下来判断维度的增大对降维效果的影响,设定$X$维度依次为$3-20$,统一降维至二维,判断依据为两个空间的距离.如下图所示
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{image/norm.eps}
+    \includegraphics[width=0.8\textwidth]{image/norm.eps} 
     \caption{线性回归下维度对降维效果的影响}
 \end{figure}
 
@@ -58,5 +63,9 @@
     \includegraphics[width=0.8\textwidth]{image/cos_phd.eps}
     \caption{cos函数生成的数据下维度对降维效果的影响}
 \end{figure}
+
+\subsection{总结}
+样本量始终为1000的情况下，增大X的维数，估计空间与实际空间的差距呈上升趋势。
+但由子空间间的距离可看出，这一方法在线性回归、Logistic回归以及Possion回归上的表现都不好，仅在Y是X的cos相关函数的情况下效果较为理想。
 
 
