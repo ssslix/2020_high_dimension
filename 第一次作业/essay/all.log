@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.26)  6 DEC 2020 18:58
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.26)  6 DEC 2020 19:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -825,7 +825,14 @@ File: lstlang2.sty 2020/03/24 1.8d listings language file
 File: lstlang3.sty 2020/03/24 1.8d listings language file
 ) (d:/texlive/2020/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-)) (./all.aux)
+)) (d:/texlive/2020/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count351
+\float@exts=\toks34
+\float@box=\box103
+\@float@everytoks=\toks35
+\@floatcapt=\box104
+) (./all.aux)
 \openout1 = `all.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -856,7 +863,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (d:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count351
+\c@section@level=\count352
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
@@ -901,17 +908,18 @@ LaTeX Info: Redefining \nameref on input line 7.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 7.
-\c@mv@tabular=\count352
-\c@mv@boldtabular=\count353
+\c@mv@tabular=\count353
+\c@mv@boldtabular=\count354
  (d:/texlive/2020/texmf-dist/tex/latex/footmisc/footmisc.sty
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks34
+\FN@temptoken=\toks36
 \footnotemargin=\dimen291
-\c@pp@next@reset=\count354
+\c@pp@next@reset=\count355
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -919,7 +927,7 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
 Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
 )
-\c@lstlisting=\count355
+\c@lstlisting=\count356
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 17.28pt on input line 11.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
@@ -956,40 +964,44 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 19.
 File: image/norm.eps Graphic file (type eps)
 <image/norm.eps>
+ [3]
 File: image/pois_phd.eps Graphic file (type eps)
 <image/pois_phd.eps>
 File: image/logit_phd.eps Graphic file (type eps)
 <image/logit_phd.eps>
+ [4]
 File: image/cos_phd.eps Graphic file (type eps)
 <image/cos_phd.eps>
-) (./sir.tex [3] [4] [5]
+) (./sir.tex [5]
 File: image/pois_sir.eps Graphic file (type eps)
 <image/pois_sir.eps>
+ [6]
 File: image/sin_sir.eps Graphic file (type eps)
 <image/sin_sir.eps>
 File: image/compare_sir.eps Graphic file (type eps)
 <image/compare_sir.eps>
-) (./save.tex [6] [7]
+ [7]) (./save.tex
 File: image/norm_save.eps Graphic file (type eps)
 <image/norm_save.eps>
+ [8]
 File: image/cos_save.eps Graphic file (type eps)
 <image/cos_save.eps>
- [8]
 File: image/compare_save_one.eps Graphic file (type eps)
 <image/compare_save_one.eps>
+ [9]
 File: image/compare_dim_save.eps Graphic file (type eps)
 <image/compare_dim_save.eps>
-) [9] [10] (./all.aux)
+) [10] (./all.aux)
 Package rerunfilecheck Info: File `all.out' has not changed.
 (rerunfilecheck)             Checksum: 2E7CE20ACAFC088DDA4845AA26EDAAF6;1891.
  ) 
 Here is how much of TeX's memory you used:
- 21067 strings out of 477453
- 396441 string characters out of 5840417
- 990921 words of memory out of 5000000
- 40166 multiletter control sequences out of 15000+600000
+ 21115 strings out of 477453
+ 397081 string characters out of 5840417
+ 987921 words of memory out of 5000000
+ 40210 multiletter control sequences out of 15000+600000
  569991 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,9n,135p,382b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,9n,135p,400b,557s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on all.pdf (10 pages).
