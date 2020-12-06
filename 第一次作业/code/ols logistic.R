@@ -2,9 +2,16 @@ l<-function(coef,X,y,n,EXY){
   f1=0
   f2=0
   for(i in 1:n){
-    f1=f1-2*t(EXY)%*%X[,i]*(y[i]-exp(t(EXY)%*%X[,i]*coef))*exp(t(EXY)%*%X[,i]*coef)
-    f2=f2-2*(t(EXY)%*%X[,i])^(2)*y[i]*exp(t(EXY)%*%X[,i]*coef)+4*(t(EXY)%*%X[,i])^(2)*exp(2*t(EXY)%*%X[,i]*coef)
+   
+    
+    
+    f1 = f1 +2*t(EXY)%*%X[,i]*exp(-t(EXY)%*%X[,i]*coef)/(1+exp(-t(EXY)%*%X[,i]*coef))^2*
+      (y[i]-1/(1+exp(-t(EXY)%*%X[,i]*coef)))
+    f2 = f2 + 2*(-(t(EXY)%*%X[,i]*exp(-t(EXY)%*%X[,i]*coef)/(1+exp(-t(EXY)%*%X[,i]*coef))^2)^2+
+                  (y[i]-1/(1+exp(-t(EXY)%*%X[,i]*coef)))*(((t(EXY)%*%X[,i])^2*exp(-t(EXY)%*%X[,i]*coef)*
+                                                             (1-exp(-t(EXY)%*%X[,i]*coef))/(1+exp(-t(EXY)%*%X[,i]*coef))^3)))
   }
+  
   return(f1/f2)
 }
 
@@ -32,7 +39,7 @@ object<-function(p,n,coef){
   {
     X[,j]=runif(p,min=-1,max=1)
     lambda=exp(beta%*%X[,j])/(1+exp(beta%*%X[,j]))
-    y[j]=rbinom(1,lambda)+rnorm(1,0,1)
+    y[j]=rbinom(1,1,lambda)+rnorm(1,0,1)
   }
   EXY=X%*%y/n
   coef=coef
@@ -40,5 +47,10 @@ object<-function(p,n,coef){
   EXY*C
   return(EXY*C)
 }
-
-object(5,100,2)
+true <- rep(1,20)
+mse <- 0
+for (i in 1:100)
+  {
+  beta <- object(20,1000,2)
+  mse <- mse + sqrt(sum((beta - true)^2))
+}

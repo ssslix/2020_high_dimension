@@ -1,15 +1,15 @@
-##Ö÷Ìåº¯ÊýxÎ¬¶Èp,Ñù±¾n
+##ä¸»ä½“å‡½æ•°xç»´åº¦p,æ ·æœ¬n
 object<-function(p,n){
-  beta = rep(1,p)#³õÊ¼»¯beta ÉèÎªmÎ¬È«Îª1
-  X=matrix(nrow=p,ncol=n)#³õÊ¼»¯Ñù±¾
+  beta = rep(1,p)#åˆå§‹åŒ–beta è®¾ä¸ºmç»´å…¨ä¸º1
+  X=matrix(nrow=p,ncol=n)#åˆå§‹åŒ–æ ·æœ¬
   y = rep(0,n)
-  for(j in 1:n)#°´ÕýÌ¬·Ö²¼Éú³ÉÊý¾Ýy
+  for(j in 1:n)#æŒ‰æ­£æ€åˆ†å¸ƒç”Ÿæˆæ•°æ®y
   {
     X[,j]=runif(p,min=-10,max=10)
     lambda=beta%*%X[,j]
     y[j]=rnorm(1,lambda,1)+rnorm(1,1,0.1)
   }
-  #±ê×¼»¯XµÃµ½Z£¬ÖÐÐÄ»¯y
+  #æ ‡å‡†åŒ–Xå¾—åˆ°Zï¼Œä¸­å¿ƒåŒ–y
   mu=rowMeans(X)
   var=cov(t(X-mu))
   lamda =solve(eigen(var)$vectors)%*%var%*%(eigen(var)$vectors)
@@ -18,10 +18,22 @@ object<-function(p,n){
   sd=solve(var_sqrt)
   Z=sd%*%(X-mu)
   y=y-mean(y)
-  #¼ÆËãEYZ,×îºó·µ»Øsd%*%EYZ¹À¼Æbetahat
+  #è®¡ç®—EYZ,æœ€åŽè¿”å›žsd%*%EYZä¼°è®¡betahat
   EYZ= Z%*%y/n
   EYZ
   return(sd%*%EYZ)
 }
 
-object(100,1000)
+
+
+experiment <- function(dim, n,times){
+  true <- rep(1,dim)
+  mse <- 0
+  for (i in 1:times){
+    beta <- object(dim,n)
+    mse <- mse + sqrt(sum((beta - true)^2))
+  }
+  return(mse)
+}
+
+experiment(20,1000,100)
