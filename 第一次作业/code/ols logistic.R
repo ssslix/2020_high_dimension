@@ -47,10 +47,18 @@ object<-function(p,n,coef){
   EXY*C
   return(EXY*C)
 }
-true <- rep(1,20)
-mse <- 0
-for (i in 1:100)
-  {
-  beta <- object(20,1000,2)
-  mse <- mse + sqrt(sum((beta - true)^2))
+
+
+object(10,2000,2)
+
+experiment <- function(dim, n,init,times){
+  true <- rep(1,dim)
+  mse <- 0
+  for (i in 1:times){
+    beta <- object(dim,n,init)
+    mse <- mse + sqrt(sum((beta - true)^2))
+  }
+  return(mse)
 }
+
+experiment(10,2000,2,100)

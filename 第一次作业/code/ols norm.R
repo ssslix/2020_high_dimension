@@ -37,3 +37,5 @@ experiment <- function(dim, n,times){
 }
 
 experiment(20,1000,100)
+
+

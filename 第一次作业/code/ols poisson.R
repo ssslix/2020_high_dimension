@@ -45,6 +45,8 @@ object<-function(p,n,coef){
 
 object(10,2000,2)
 
+
+
 experiment <- function(dim, n,init,times){
   true <- rep(1,dim)
   mse <- 0
