@@ -38,4 +38,6 @@ experiment <- function(dim, n,times){
 
 experiment(20,1000,100)
 
-
+# dim :10 <- mse*100 = 1.75999
+# dim: 15 <- mse*100 = 2.092107
+# dim: 20 <- mse*100 = 2.497289

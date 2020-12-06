@@ -49,7 +49,7 @@ object<-function(p,n,coef){
 }
 
 
-object(10,2000,2)
+  
 
 experiment <- function(dim, n,init,times){
   true <- rep(1,dim)
@@ -61,4 +61,9 @@ experiment <- function(dim, n,init,times){
   return(mse)
 }
 
-experiment(10,2000,2,100)
+experiment(20,2000,2,100)
+
+
+# dim:10 <- mse*100 = 33.25142
+# dim:15 <- mse*100 =  128.2584
+# dim:20 <- mse*100 =  169.1181
