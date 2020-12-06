@@ -1,3 +1,4 @@
+library(ggplot2)
 object <- function(p, q, n) {
   #p初始化x维数,q初始化t(beta)作用在X上用的有效维度 n样本量
   
@@ -16,7 +17,7 @@ object <- function(p, q, n) {
     #y[j] = rnorm(1, lambda1, 1) + rnorm(1, 1, 0.1) #正态
     #y[j]=rpois(1,lambda2)+rnorm(1,0,0.1)   #泊松
     #y[j]=rbinom(1,1,lambda3)++rnorm(1,0,0.1)  #logistic
-    y[j] = sin(2 * c(t(beta) %*% X[, j])) #+ cos(c(t(beta[, 2]) %*% X[, j])) +
+    y[j] = cos(2 * c(t(beta[,1]) %*% X[, j])) + cos(c(t(beta[, 2]) %*% X[, j]))  + cos(c(t(beta[, 3]) %*% X[, j])) +cos(c(t(beta[, 4]) %*% X[, j])) +cos(c(t(beta[, 5]) %*% X[, j]))
        + rnorm(1, 1, 0.1)
     #y[j]=rnorm(1,2*X[2,j],1)+rnorm(1,X[1,j],1)+rnorm(1,0,0.1)
     #y[j]=exp(X[1,j])+exp(X[2,j])+rnorm(1,0,0.1)
@@ -82,7 +83,7 @@ object <- function(p, q, n) {
   return(dis)
 }
 
-object(10,2,1000)
+# object(10,2,1000)
 ##估计原本beta对应的q的值
 experiment <-function(dim_x,dim_r,n){
   dis <- rep(0,11)
@@ -95,11 +96,15 @@ experiment <-function(dim_x,dim_r,n){
 }
 dim <- rep(10:20)
 #dis <- experiment(20,2,1000)
-dis_cos <- experiment(20,1,1000)
-dis_sin <- experiment(20,1,1000)
+#dis_cos <- experiment(20,1,1000)
+#dis_sin <- experiment(20,1,1000)
 
-dis <- data.frame(dim,dis_sin,dis_cos)
-ggplot(data=dis)+geom_point(aes(dim,dis_cos,colour='cos'))+geom_point(aes(dim,dis_sin,colour="sin"))
+dis_cos_2 <- experiment(20,2,1000)
+dis_cos_3 <- experiment(20,3,1000)
+dis_cos_4 <- experiment(20,4,1000)
+dis_cos_5 <- experiment(20,5,1000)
+dis <- data.frame(dim,dis_cos,dis_cos_2,dis_cos_3,dis_cos_4,dis_cos_5)
+ggplot(data=dis)+geom_line(aes(dim,dis_cos,colour='1'))+geom_line(aes(dim,dis_cos_2,colour="2"))+geom_line(aes(dim,dis_cos_3,colour="3"))+geom_line(aes(dim,dis_cos_4,colour="4"))+geom_line(aes(dim,dis_cos_5,colour="5"))
 
 
 

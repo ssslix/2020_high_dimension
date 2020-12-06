@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.26)  6 DEC 2020 18:40
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.10.26)  6 DEC 2020 18:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -977,15 +977,17 @@ File: image/cos_save.eps Graphic file (type eps)
  [8]
 File: image/compare_save_one.eps Graphic file (type eps)
 <image/compare_save_one.eps>
+File: image/compare_dim_save.eps Graphic file (type eps)
+<image/compare_dim_save.eps>
 ) [9] [10] (./all.aux)
 Package rerunfilecheck Info: File `all.out' has not changed.
 (rerunfilecheck)             Checksum: 2E7CE20ACAFC088DDA4845AA26EDAAF6;1891.
  ) 
 Here is how much of TeX's memory you used:
- 21063 strings out of 477453
- 396330 string characters out of 5840417
+ 21067 strings out of 477453
+ 396441 string characters out of 5840417
  990921 words of memory out of 5000000
- 40163 multiletter control sequences out of 15000+600000
+ 40166 multiletter control sequences out of 15000+600000
  569991 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,9n,135p,382b,555s stack positions out of 5000i,500n,10000p,200000b,80000s
