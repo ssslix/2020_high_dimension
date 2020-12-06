@@ -1,0 +1,59 @@
+\documentclass[lang=cn,11pt]{elegantpaper}
+\title{原理}
+\author{}
+\usepackage{float}
+% 不需要版本信息，直接注释即可
+% \version{0.07}
+% 不需要时间信息的话，需要把 \today 删除。
+\date{}
+\begin{document}
+    \section{PHD}
+    \subsection{理论依据}
+    \begin{align*}
+        &H_1 = \Sigma_{XX}^{-1} \Sigma_{XXY} \Sigma_{XX}^{-1} \\
+        &span(H_1) \subseteq S_{Y|X}
+    \end{align*}
+    \subsection{样本计算流程}
+    1. 将$X_1,\dots,X_n$标准化为$Z_1,\dots,Z_n$
+
+    2. 计算$\hat{\Sigma}_{ZZY}E_n(ZZ^TY),\quad \hat{\Sigma}_{XX}Var_n(X)$
+
+    3. 计算$\hat{\Sigma}_{ZZY}$的前$q$个特征向量$u_1,\dots,u_n$，则对$S_{Y|X}$中向量的估计为$v_k=\hat{\Sigma}_{XX}^{-1/2}u_k,k=1,\dots,q$
+    \section{SIR}
+    \subsection{理论依据}
+    \begin{equation*}
+        span{Cov(E(X|Y))}\subseteq S_{Y|X}
+    \end{equation*}
+    将区间$(-\infty,+\infty)$划分为$k$个区间$I_i, i=1,\dots,k$,定义$\widetilde{Y}=\sum_{i=1}^kiI\{Y\in I_i\}$，则有
+    \begin{equation*}
+        span{Cov(E(X|\widetilde{Y}))}\subseteq S_{Y|X}
+    \end{equation*}
+    \subsection{样本计算流程}
+    1. 将$X_1,\dots,X_n$标准化为$Z_1,\dots,Z_n$
+
+    2. 将$[a,b]=[min{Y_i}_{i=1}^n,max{Y_i}_{i=1}^n]$划分为$k$个区间，得到$\widetilde{Y}_i$；由此计算$\bar{\mu}_i=\frac{1}{\#\{I_i\}}\sum_{Y_j\in I_i}Z_j$
+
+    3. 计算协方差矩阵估计量$\widetilde{M}=\sum_{i=1}^kE_n[I(Y\in I_i)] E_n(Z|\widetilde{Y}=i) E_n(Z|\widetilde{Y}=i)^T=\sum_{i=1}^k\frac{\#\{I_i\}}{n}\bar{\mu_i}\bar{\mu_i}^T$
+
+    4. 计算$\widetilde{M}$的前q个特征向量$u_1,\dots,u_n$，则对$S_{Y|X}$中向量的估计为$v_k=\hat{\Sigma}_{X}^{-1/2}u_k,k=1,\dots,q$
+
+    \section{SAVE}
+    \subsection{理论依据}
+    \begin{align*}
+        &span(E[I_p-Var(X|Y)]^2) \subseteq S_{Y|X}
+    \end{align*}
+    \subsection{样本计算流程}
+    1. 将$X_1,\dots,X_n$标准化为$Z_1,\dots,Z_n$
+
+    2. 将$[a,b]=[min{Y_i}_{i=1}^n,max{Y_i}_{i=1}^n]$划分为$k$个区间，得到$\widetilde{Y}_i$；由此计算$\bar{\mu}_i=\frac{1}{\#\{I_i\}}\sum_{Y_j\in I_i}Z_j$
+
+    3. 计算条件方差估计量$\hat{\Sigma}_i=\sum_{i=1}^k\frac{1}{\#I_i}\sum_{Y_j\in I_i}(Z_j-\hat{\mu}_i)(Z_j-\hat{\mu}_i)^T$
+
+    4. 计算协方差矩阵估计量
+    \begin{align*}
+        \widetilde{M}&=\sum_{i=1}^kE_n[I(Y\in I_i)] [I_{p\times p}-Var(Z|\widetilde{Y}=i)]^2 \\
+        &=\sum_{i=1}^k\frac{\#\{I_i\}}{n}(I_{p\times p}-\hat{\Sigma}_i)^2
+    \end{align*}
+
+    5. 计算$\widetilde{M}$的前q个特征向量$u_1,\dots,u_n$，则对$S_{Y|X}$中向量的估计为$v_k=\hat{\Sigma}_{X}^{-1/2}u_k,k=1,\dots,q$
+\end{document}
