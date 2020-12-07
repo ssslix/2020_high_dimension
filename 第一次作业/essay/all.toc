@@ -10,3 +10,15 @@
 \contentsline {subsection}{\numberline {2.6}Logistic回归}{7}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}生成cos函数关系}{7}{subsection.2.7}%
 \contentsline {subsection}{\numberline {2.8}总结}{8}{subsection.2.8}%
+\contentsline {section}{\numberline {3}SIR}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}理论依据}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}样本计算流程}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}确定估计后降维维度}{9}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}线性函数关系}{9}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}生成sin函数关系}{10}{subsection.3.5}%
+\contentsline {section}{\numberline {4}SAVE}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}理论依据}{11}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}样本计算流程}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}线性回归模型}{11}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}cos函数与sin函数生成的数据的降维计算}{12}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}总结}{13}{subsection.4.5}%

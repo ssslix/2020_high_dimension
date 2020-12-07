@@ -1,3 +1,4 @@
+library(ggplot2)
 object <- function(p, q, n) {
   #p初始化x维数,q初始化t(beta)作用在X上用的有效维度 n样本量
   
@@ -16,7 +17,7 @@ object <- function(p, q, n) {
     #y[j] = rnorm(1, lambda1, 1) + rnorm(1, 1, 0.1) #正态
     #y[j]=rpois(1,lambda2)+rnorm(1,0,0.1)   #泊松
     #y[j]=rbinom(1,1,lambda3)++rnorm(1,0,0.1)  #logistic
-    y[j] = sin(2 * c(t(beta) %*% X[, j]))# + sin(c(t(beta[, 2]) %*% X[, j])) 
+     y[j] = sin(2 * c(t(beta[,1]) %*% X[, j]))  + sin(c(t(beta[, 2]) %*% X[, j])) 
     + rnorm(1, 1, 0.1)
     #y[j]=rnorm(1,2*X[2,j],1)+rnorm(1,X[1,j],1)+rnorm(1,0,0.1)
     #y[j]=exp(X[1,j])+exp(X[2,j])+rnorm(1,0,0.1)
@@ -51,6 +52,7 @@ object <- function(p, q, n) {
   }
   M = g %*% diag(prob) %*% t(g)
   alpha = eigen(M)$vector
+  alpha=sir(t(X),y,h,q,"continuous")
   beta_hat = sd %*% alpha[, 1:q]
   
   
@@ -88,19 +90,20 @@ q_hat=fixq(eigen(M)$value,n,p)
 experiment <-function(dim_x,dim_r,n){
   dis <- rep(0,11)
   for (i in 1:11){
-    for(i in 1:100){
-      dis[i] <- object(i+9,dim_r,n)/100
+    for(j in 1:100){
+      dis[i] <-dis[i]+  object(i+9,dim_r,n)/100
     }
     
   }
-  #dim <- rep(10:20)
-  #dis <- data.frame(dim,dis)
+  dim <- rep(10:20)
+  dis <- data.frame(dim,dis)
   return(dis)
 }
+dis <- experiment(20,2,1000)
+#dis_cos <- experiment(20,1,1000)
+#dis_sin <- experiment(20,1,1000)
+#dim <- rep(10:20)
+#dis <- data.frame(dim,dis_sin,dis_cos)
+# ggplot(data=dis)+geom_point(aes(dim,dis_cos,colour='cos'))+geom_point(aes(dim,dis_sin,colour="sin"))
 
-dis_cos <- experiment(20,1,1000)
-dis_sin <- experiment(20,1,1000)
-dim <- rep(10:20)
-dis <- data.frame(dim,dis_sin,dis_cos)
-ggplot(data=dis)+geom_point(aes(dim,dis_cos,colour='cos'))+geom_point(aes(dim,dis_sin,colour="sin"))
-
+ggplot(data=dis,aes(x=dim,y=dis))+geom_line(linetype="dotted")+geom_point(size=4, shape=20)
