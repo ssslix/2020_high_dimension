@@ -25,7 +25,8 @@
 \end{figure}
 
 
-\subsection{cos函数生成的数据的降维计算}
+\subsection{cos函数与sin函数生成的数据的降维计算}
+按$y=\cos(2\beta_1^Tx)+\cos(\beta_2^Tx)+\varepsilon$,生成样本y。其中$\beta_1$是参数矩阵$\beta$的第一列向量，同理$\beta_2$，而$\varepsilon$服从均值为0，方差0.1的正态分布。对于sinh函数关系，我们按$y=\sin(2\beta_1^Tx)+\sin(\beta_2^Tx)+\varepsilon$,生成样本y。一维下就去掉$\beta_2^Tx$项。
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{image/cos_save.eps}
