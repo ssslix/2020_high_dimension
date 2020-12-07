@@ -88,7 +88,10 @@ q_hat=fixq(eigen(M)$value,n,p)
 experiment <-function(dim_x,dim_r,n){
   dis <- rep(0,11)
   for (i in 1:11){
-    dis[i] <- object(i+9,dim_r,n)
+    for(i in 1:100){
+      dis[i] <- object(i+9,dim_r,n)/100
+    }
+    
   }
   #dim <- rep(10:20)
   #dis <- data.frame(dim,dis)
