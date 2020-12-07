@@ -43,7 +43,7 @@ object<-function(p,n,coef){
   return(EXY*C)
 }
 
-object(10,2000,2)
+object(10,1000,2)
 
 
 

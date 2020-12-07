@@ -24,7 +24,7 @@ object<-function(p,n){
   return(sd%*%EYZ)
 }
 
-
+object(10,1000)
 
 experiment <- function(dim, n,times){
   true <- rep(1,dim)

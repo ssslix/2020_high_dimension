@@ -48,7 +48,7 @@ object<-function(p,n,coef){
   return(EXY*C)
 }
 
-
+object(10,1000,2)
   
 
 experiment <- function(dim, n,init,times){
@@ -61,7 +61,7 @@ experiment <- function(dim, n,init,times){
   return(mse)
 }
 
-experiment(20,2000,2,100)
+# experiment(20,2000,2,100)
 
 
 # dim:10 <- mse*100 = 33.25142
