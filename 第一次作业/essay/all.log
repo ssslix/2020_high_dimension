@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.22)  7 DEC 2020 18:48
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.22)  7 DEC 2020 22:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1205,7 +1205,18 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 13.
- (./all.toc)
+ (./all.toc
+LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.95pt on input line 1.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.95pt on input line 2.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 2.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.1pt on input line 2.
+)
 \tf@toc=\write5
 \openout5 = `all.toc'.
 
@@ -1214,12 +1225,6 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <12> not available
 (Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 1.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 3.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 3.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.1pt on input line 3.
 
 Overfull \hbox (35.24062pt too wide) in paragraph at lines 3--5
 \TU/SimSun(0)/m/n/10.95 利 用 最 小 线 性 二 乘 作 为 目 标 函 数，|  牛 顿 迭 代 法 计 算 此 模 型 参 数\T1/ntxtlf/m/n/10.95 , \TU/SimSun(0)/m/n/10.95 即 用 牛 顿 迭 代 法 计 算 $[]\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 Y \LMS/ntxsy/m/n/10.95 ^^@ \OML/ntxmi/m/it/10.95 G\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 E\LMS/ntxsy/m/n/10.95 ¹\OML/ntxmi/m/it/10.95 XY\LMS/ntxsy/m/n/10.95 º[]\OML/ntxmi/m/it/10.95 Xc\LMS/ntxsy/m/n/10.95 ºº[]$\TU/SimSun(0)/m/n/10.95 。|
@@ -1237,17 +1242,9 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 16.
 ) (./pHd.tex [3] [4]
-LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 50.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 50.
-
-
-LaTeX Warning: Reference `tab:norm' on page 5 undefined on input line 50.
-
 File: image/norm.eps Graphic file (type eps)
 <image/norm.eps>
-[5]
+ [5]
 File: image/pois_phd.eps Graphic file (type eps)
 <image/pois_phd.eps>
 File: image/logit_phd.eps Graphic file (type eps)
@@ -1262,28 +1259,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 31.
  (./all.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 31.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 31.
-
-
-Package rerunfilecheck Warning: File `all.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `all.out':
-(rerunfilecheck)             Before: 85B0384004E45D42D50541ABEAA0D526
-(rerunfilecheck)             After:  0AE75D79EEB90AC55EF4D8E5AC4C81A0.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `all.out' has not changed.
+(rerunfilecheck)             Checksum: 0AE75D79EEB90AC55EF4D8E5AC4C81A0.
  ) 
 Here is how much of TeX's memory you used:
- 30542 strings out of 493936
- 577852 string characters out of 6161408
+ 30545 strings out of 493936
+ 577937 string characters out of 6161408
  894349 words of memory out of 5000000
- 34123 multiletter control sequences out of 15000+600000
- 593228 words of font info for 132 fonts, out of 8000000 for 9000
+ 34125 multiletter control sequences out of 15000+600000
+ 593236 words of font info for 133 fonts, out of 8000000 for 9000
  740 hyphenation exceptions out of 8191
  66i,12n,124p,804b,537s stack positions out of 5000i,500n,10000p,200000b,80000s
 
