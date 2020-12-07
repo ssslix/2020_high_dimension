@@ -1,4 +1,5 @@
 library(stargazer)
+library(ggplot2)
 object <- function(p, q, n) {
   #p初始化x维数,q初始化t(beta)作用在X上用的有效维度 n样本量
   
@@ -69,7 +70,9 @@ object <- function(p, q, n) {
 experiment <-function(dim_x,dim_r,n){
   dis <- rep(0,dim_x-dim_r)
   for (i in 1:(dim_x-dim_r)){
-    dis[i] <- object(i+dim_r,dim_r,n)
+    for(j in 1:100){
+      dis[i] <-dis[i]+ object(i+dim_r,dim_r,n)/100
+    }
   }
   dim <- rep((dim_r+1):dim_x)
   dis <- data.frame(dim,dis)
