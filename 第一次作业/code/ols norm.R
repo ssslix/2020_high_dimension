@@ -5,7 +5,7 @@ object<-function(p,n){
   y = rep(0,n)
   for(j in 1:n)#按正态分布生成数据y
   {
-    X[,j]=runif(p,min=-10,max=10)
+    X[,j]=runif(p,min=-1,max=1)
     lambda=beta%*%X[,j]
     y[j]=rnorm(1,lambda,1)+rnorm(1,1,0.1)
   }
