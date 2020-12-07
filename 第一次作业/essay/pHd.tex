@@ -51,11 +51,22 @@ $\hat{\beta_{1}}$&$\hat{\beta_{2}}$& \multicolumn{1}{l|}{$\hat{\beta_{1}}$}  &$\
 接下来判断维度的增大对降维效果的影响,设定$X$维度依次为$3-20$,统一降维至二维,采用H1方法，估计$\beta$，重复实验100次，计算距离的均值。判断依据为两个空间的距离（$L_2-Hausdorff$子空间距离，越接近0表示两个空间越接近）.如下图所示
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{image/norm_phd.eps} 
+    \includegraphics[width=0.6\textwidth]{image/norm_phd.eps} 
     \caption{线性回归下维度对降维效果的影响}
 \end{figure}
-
-
+三个回归模型数据生成均与之前相同。
+我们取了一次$\beta$估计的结果，如下：可见在$\hat{\beta_1}$的估计接近于原本的$\beta_1$。但之后的$\hat{\beta_2}$结果不好。
+\begin{equation}       %开始数学环境
+    \beta= \left(                 %左括号
+       \begin{array}{cc}   %该矩阵一共3列，每一列都居中放置
+        0.19658425 & -0.41901508\\  %第一行元素
+        0.85103905  & -0.08816587 \\  %第二行元素
+        -0.33307315  &-0.74230162 \\
+        0.08836722& 0.18096793 \\
+        -0.32003661 & 0.47946138 \\
+       \end{array}
+     \right)                 %右括号
+ \end{equation}
 \subsection{泊松回归}
 \begin{figure}[H]
     \centering
@@ -73,6 +84,18 @@ $\hat{\beta_{1}}$&$\hat{\beta_{2}}$& \multicolumn{1}{l|}{$\hat{\beta_{1}}$}  &$\
 
 \subsection{生成cos函数关系}
 按$y=\cos(2\beta_1^Tx)+\cos(\beta_2^Tx)+\varepsilon$,生成样本y。其中$\beta_1$是参数矩阵$\beta$的第一列向量，同理$\beta_2$，而$\varepsilon$服从均值为0，方差0.1的正态分布。
+我们取了一次$\beta$估计的结果，如下：可以看出相比之前线性回归的结果更显著。
+\begin{equation}       %开始数学环境
+    \beta= \left(                 %左括号
+       \begin{array}{cc}   %该矩阵一共3列，每一列都居中放置
+        0.42368175 & 0.88683780 \\  %第一行元素
+        -0.85839717  & 0.41939820 \\  %第二行元素
+        -0.18374181  &0.12044820 \\
+        -0.02764839 & 0.07755837 \\
+        0.08823271 & -0.02166378 \\
+       \end{array}
+     \right)                 %右括号
+ \end{equation}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{image/cos_phd.eps}
