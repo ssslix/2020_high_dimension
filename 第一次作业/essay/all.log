@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.22)  8 DEC 2020 00:10
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.22)  8 DEC 2020 21:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1241,7 +1241,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10> not available
 (Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 16.
-) (./pHd.tex [3] [4]
+) [3] (./pHd.tex [4]
 File: image/norm_phd.eps Graphic file (type eps)
 <image/norm_phd.eps>
  [5]
@@ -1265,7 +1265,7 @@ Package rerunfilecheck Info: File `all.out' has not changed.
 Here is how much of TeX's memory you used:
  30545 strings out of 493936
  577949 string characters out of 6161408
- 894349 words of memory out of 5000000
+ 892349 words of memory out of 5000000
  34125 multiletter control sequences out of 15000+600000
  593236 words of font info for 133 fonts, out of 8000000 for 9000
  740 hyphenation exceptions out of 8191
