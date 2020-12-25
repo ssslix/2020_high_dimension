@@ -2,7 +2,7 @@ library(stargazer)
 object <- function(p, q, n) {
   #p初始化x维数,q初始化t(beta)作用在X上用的有效维度 n样本量
   #初始化beta矩阵p*q维
-  beta  <- diag(rep(1, p))[, 1:q]##是个单位阵，取前p个行向量
+  beta  <- diag(rep(1, p))[, 1:q]##是个单位阵，取前q个列向量
   X = matrix(nrow = p, ncol = n)
   y = rep(0, n)
   for (j in 1:n)

@@ -4,7 +4,7 @@ object <- function(p, q, n) {
   
   h = 10
   #初始化beta矩阵p*q维
-  beta  <- diag(rep(1, p))[, 1:q]##是个单位阵，取前p个行向量
+  beta  <- diag(rep(1, p))[, 1:q]##是个单位阵，取前q个列向量
   X = matrix(nrow = p, ncol = n)
   y = rep(0, n)
   for (j in 1:n)
