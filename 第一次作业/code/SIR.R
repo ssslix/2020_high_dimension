@@ -18,7 +18,7 @@ object <- function(p, q, n) {
     #y[j]=rpois(1,lambda2)+rnorm(1,0,0.1)   #泊松
     #y[j]=rbinom(1,1,lambda3)++rnorm(1,0,0.1)  #logistic
      y[j] = sin(2 * c(t(beta[,1]) %*% X[, j]))  + sin(c(t(beta[, 2]) %*% X[, j])) 
-    + rnorm(1, 1, 0.1)
+    + rnorm(1, 0, 0.1)
     #y[j]=rnorm(1,2*X[2,j],1)+rnorm(1,X[1,j],1)+rnorm(1,0,0.1)
     #y[j]=exp(X[1,j])+exp(X[2,j])+rnorm(1,0,0.1)
     #y[j]=rpois(1,exp(X[1,j]))+rpois(1,exp(X[2,j]))+rnorm(1,0,0.1)
@@ -52,7 +52,6 @@ object <- function(p, q, n) {
   }
   M = g %*% diag(prob) %*% t(g)
   alpha = eigen(M)$vector
-  alpha=sir(t(X),y,h,q,"continuous")
   beta_hat = sd %*% alpha[, 1:q]
   
   
