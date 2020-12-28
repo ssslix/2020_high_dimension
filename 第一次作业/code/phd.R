@@ -16,11 +16,11 @@ object <- function(p, q, n) {
     lambda1 = sum(t(beta) %*% X[, j])
     lambda2 = exp(sum(t(beta) %*% X[, j]))
     lambda3 = exp(sum(t(beta) %*% X[, j])) / (1 + exp(sum(t(beta) %*% X[, j])))
-    y[j]=rnorm(1,lambda1,1)+rnorm(1,1,0.1) #正态
+    #y[j]=rnorm(1,lambda1,1)+rnorm(1,0,0.1) #正态
     #y[j]=rpois(1,lambda2)+rnorm(1,0,0.1)   #泊松
     #y[j]=rbinom(1,1,lambda3)++rnorm(1,0,0.1)  #logistic
-    # y[j] = cos(2 * c(t(beta[, 1]) %*% X[, j])) + cos(c(t(beta[, 2]) %*% X[, j])) +
-    #   +rnorm(1, 1, 0.1)
+     y[j] = cos(2 * c(t(beta[, 1]) %*% X[, j])) + sin(c(t(beta[, 2]) %*% X[, j])) +
+      +rnorm(1, 1, 0.1)
     #y[j]=rnorm(1,2*X[2,j],1)+rnorm(1,X[1,j],1)+rnorm(1,0,0.1)
     #y[j]=exp(X[1,j])+exp(X[2,j])+rnorm(1,0,0.1)
     #y[j]=rpois(1,exp(X[1,j]))+rpois(1,exp(X[2,j]))+rnorm(1,0,0.1)
@@ -65,7 +65,7 @@ object <- function(p, q, n) {
   dis = sqrt(dis)
   return( beta_hat1)
 }
-
+object(10,2,1000)
 
 experiment <-function(dim_x,dim_r,n){
   dis <- rep(0,dim_x-dim_r)

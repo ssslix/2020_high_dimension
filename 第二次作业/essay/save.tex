@@ -17,7 +17,7 @@
 \end{enumerate}
 在实际计算中,将$[Y_{(1),Y_(n)}]$划分为$10$个区间.
 \subsection{线性回归模型}
-设定样本量为1000,降维维数由$10-20$,判断其降维效果.
+设置降维维度为二维,即按$y=\beta_1^Tx+\beta_2^Tx+\varepsilon$,生成样本y。其中$\beta_1$是参数矩阵$\beta$的第一列向量，同理$\beta_2$，而$\varepsilon$服从均值为0，方差0.1的正态分布。设定样本量为1000,降维维数由$10-20$,判断其降维效果.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{image/norm_save.eps}
@@ -25,25 +25,46 @@
 \end{figure}
 
 
+\subsection{泊松回归模型}
+按$y = \exp{(\beta^Tx)}+\varepsilon$ 生成样本$y$, $\varepsilon \sim N(0,0.1)$,设定样本量为1000,降维维数由$10-20$,判断其降维效果.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/pois_save.eps}
+    \caption{泊松回归下维度对降维效果的影响}
+\end{figure}
+
+
+\subsection{logistic回归}
+
+按$y = \frac{1}{1+\exp{(-\beta^Tx)}}+ \varepsilon$关系生成样本$y$,$\varepsilon \sim N(0,0.1)$,设定样本量为1000,降维维数由$10-20$,判断其降维效果.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{image/logit_save.eps}
+    \caption{logistic回归下维度对降维效果的影响}
+\end{figure}
+
+
+
 \subsection{cos函数与sin函数生成的数据的降维计算}
-按$y=\cos(2\beta_1^Tx)+\cos(\beta_2^Tx)+\varepsilon$,生成样本y。其中$\beta_1$是参数矩阵$\beta$的第一列向量，同理$\beta_2$，而$\varepsilon$服从均值为0，方差0.1的正态分布。对于sinh函数关系，我们按$y=\sin(2\beta_1^Tx)+\sin(\beta_2^Tx)+\varepsilon$,生成样本y。一维下就去掉$\beta_2^Tx$项。
+按$y=\cos(2\beta_1^Tx)+\cos(\beta_2^Tx)+\varepsilon$,生成样本y。其中$\beta_1$是参数矩阵$\beta$的第一列向量，同理$\beta_2$，而$\varepsilon$服从均值为0，方差0.1的正态分布。对于$\sin$函数关系，我们按$y=\sin(2\beta_1^Tx)+\sin(\beta_2^Tx)+\varepsilon$,生成样本y。在一维情况下去掉$\beta_2^Tx$项。
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{image/cos_save.eps}
-    \caption{cos函数生成的数据下维度对降维效果的影响(二维)}
+    \caption{$\cos$函数生成的数据下维度对降维效果的影响(二维)}
 \end{figure}
 
+而将目标降维维度设置为一维时,$\cos$函数与$\sin$函数生成的数据下维度对降维效果的影响如图所示
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{image/compare_save_one.eps}
-    \caption{cos函数与sin函数生成的数据下维度对降维效果的影响(一维)}
+    \caption{$\cos$函数与$\sin$函数生成的数据下维度对降维效果的影响(一维)}
 \end{figure}
 
 而在将降维后维数分别设定为1,2,3,4,5时,其降维效果如图所示
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{image/compare_dim_save.eps}
-    \caption{cos函数生成的数据下降维后维度对降维效果的影响}
+    \caption{$\cos$函数生成的数据下降维后维度对降维效果的影响}
 \end{figure}
 
 \subsection{总结}

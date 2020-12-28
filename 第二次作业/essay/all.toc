@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}SIR}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}理论依据}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}样本计算流程}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}确定估计后降维维度}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}线性函数关系}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}生成sin函数关系}{4}{subsection.1.5}%
+\contentsline {section}{\numberline {2}SAVE}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}理论依据}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}样本计算流程}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}线性回归模型}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}泊松回归模型}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}logistic回归}{7}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}cos函数与sin函数生成的数据的降维计算}{8}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}总结}{9}{subsection.2.7}%
+\contentsline {section}{\numberline {3}IHT}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}理论依据}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}线性回归模型}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}对数似然回归}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}$\qopname \relax o{cos}$与$\qopname \relax o{sin}$函数关系}{11}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}三角函数在IHT与PHD下降维效果的对比}{11}{subsection.3.5}%

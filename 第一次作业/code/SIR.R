@@ -14,7 +14,7 @@ object <- function(p, q, n) {
     lambda1 = sum(t(beta) %*% X[, j])
     lambda2 = exp(sum(t(beta) %*% X[, j]))
     lambda3 = exp(sum(t(beta) %*% X[, j])) / (1 + exp(sum(t(beta) %*% X[, j])))
-    #y[j] = rnorm(1, lambda1, 1) + rnorm(1, 1, 0.1) #正态
+    #y[j] = rnorm(1, lambda1, 1) + rnorm(1, 0, 0.1) #正态
     #y[j]=rpois(1,lambda2)+rnorm(1,0,0.1)   #泊松
     #y[j]=rbinom(1,1,lambda3)++rnorm(1,0,0.1)  #logistic
      y[j] = sin(2 * c(t(beta[,1]) %*% X[, j]))  + sin(c(t(beta[, 2]) %*% X[, j])) 
@@ -94,10 +94,11 @@ experiment <-function(dim_x,dim_r,n){
     }
     
   }
-  dim <- rep(10:20)
+  
   dis <- data.frame(dim,dis)
   return(dis)
 }
+dim <- rep(10:20)
 dis <- experiment(20,2,1000)
 #dis_cos <- experiment(20,1,1000)
 #dis_sin <- experiment(20,1,1000)
