@@ -1,5 +1,16 @@
 \subsection{理论依据}
+$E(Z)=0,var(Z)=I_p,$则有$S_{Y|Z}$是$\Sigma_{ZZY}$的不变子空间。
 
+又有$\Sigma_{ZY} \in S_{Y|Z}$，由此可得$\Sigma_{ZY},\Sigma_{ZZY}\Sigma_{ZY},\Sigma_{ZZY}^2\Sigma_{ZY},\dots,\Sigma_{ZZY}^{p-1}\Sigma_{ZY} \in S_{Y|Z}$
+\subsection{算法流程}
+\begin{enumerate}
+    \item 将$X_1,\dots,X_n$标准化为$Z_1,\dots,Z_n$
+    \item 计算$\hat{\Sigma}_{ZY}=Cov_n(Z,Y),\hat{\Sigma}_{ZZY}=E_n(ZZ^TY)$
+    \item 计算$p\times p$矩阵$\hat{M}=(\hat{\Sigma}_{ZY},\hat{\Sigma}_{ZZY}\hat{\Sigma}_{ZY},\hat{\Sigma}_{ZZY}^2\hat{\Sigma}_{ZY},\dots,\hat{\Sigma}_{ZZY}^{p-1}\hat{\Sigma}_{ZY})$
+并记$\hat{\Lambda}=\hat{M}\hat{M}^T$
+    \item 计算$\hat{\Lambda }$的前$q$个特征向量$u_1,\dots,u_q$，并令$v_k=\hat{\Sigma}_{XX}^{-1/2}u_k,k=1,\dots,q$
+    \item 则估计量为$\{v_k^T[X_i-E_n(X)]:i=1,\dots,n\},\quad k=1,\dots,q$
+\end{enumerate}
 \subsection{线性回归模型}
 
 设置降维维度为二维,即按$y=\beta_1^Tx+\beta_2^Tx+\varepsilon$,生成样本y。其中$\beta_1$是参数矩阵$\beta$的第一列向量，同理$\beta_2$，而$\varepsilon$服从均值为0，方差0.1的正态分布。设定样本量为1000,降维维数由$10-20$,判断其降维效果.

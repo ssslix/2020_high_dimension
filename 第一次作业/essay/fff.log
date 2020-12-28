@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.3)  29 DEC 2020 00:27
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2020.11.3)  29 DEC 2020 00:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**all
-(./all.tex
+**fff
+(./fff.tex
 LaTeX2e <2020-10-01> patch level 2
 L3 programming layer <2020-10-27> xparse <2020-03-03> (d:/study/tool/texlive/2020/texmf-dist/tex/latex/elegantpaper/elegantpaper.cls
 Document Class: elegantpaper 2020/04/12 v0.09 ElegantLaTeX Paper class
@@ -832,30 +832,30 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box103
 \@float@everytoks=\toks35
 \@floatcapt=\box104
-) (./all.aux)
-\openout1 = `all.aux'.
+) (./fff.aux)
+\openout1 = `fff.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-Package hyperref Info: Link coloring ON on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+Package hyperref Info: Link coloring ON on input line 9.
  (d:/study/tool/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (d:/study/tool/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -865,12 +865,12 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count352
 )
-LaTeX Info: Redefining \ref on input line 7.
-LaTeX Info: Redefining \pageref on input line 7.
-LaTeX Info: Redefining \nameref on input line 7.
- (./all.out) (./all.out)
+LaTeX Info: Redefining \ref on input line 9.
+LaTeX Info: Redefining \pageref on input line 9.
+LaTeX Info: Redefining \nameref on input line 9.
+ (./fff.out) (./fff.out)
 \@outlinefile=\write4
-\openout4 = `all.out'.
+\openout4 = `fff.out'.
 
 
 *geometry* driver: auto-detecting
@@ -912,7 +912,7 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 7.
+LaTeX Info: Redefining \selectfont on input line 9.
 \c@mv@tabular=\count353
 \c@mv@boldtabular=\count354
  (d:/study/tool/texlive/2020/texmf-dist/tex/latex/footmisc/footmisc.sty
@@ -929,129 +929,38 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
 )
 \c@lstlisting=\count356
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 10.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 11.
+(Font)              scaled to size 14.4pt on input line 10.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 11.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 11.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
  (d:/study/tool/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
  (d:/study/tool/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 13.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 13.
- (./all.toc
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 1.
 )
-\tf@toc=\write5
-\openout5 = `all.toc'.
+Overfull \hbox (15.30081pt too wide) in paragraph at lines 36--37
+[]\T1/ntxtlf/m/n/10.95 3. \TU/SimSun(0)/m/n/10.95 计 算 协 方 差 矩 阵 估 计 量 $[] \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 E[]\OT1/cmr/m/n/10.95 [\OML/cmm/m/it/10.95 I\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 Y \OMS/cmsy/m/n/10.95 2 \OML/cmm/m/it/10.95 I[]\OT1/cmr/m/n/10.95 )]\OML/cmm/m/it/10.95 E[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 Z\OMS/cmsy/m/n/10.95 j[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 i\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 E[]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 Z\OMS/cmsy/m/n/10.95 j[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 i\OT1/cmr/m/n/10.95 )[] = [][] [][][][]$ 
+ []
 
- [2] (./sir.tex
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 1.
-File: image/norm_sir.eps Graphic file (type eps)
-<image/norm_sir.eps>
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 26.
- [3]
-File: image/sin_sir.eps Graphic file (type eps)
-<image/sin_sir.eps>
-File: image/compare_sir.eps Graphic file (type eps)
-<image/compare_sir.eps>
- [4]) (./save.tex
-File: image/norm_save.eps Graphic file (type eps)
-<image/norm_save.eps>
- [5]
-File: image/pois_save.eps Graphic file (type eps)
-<image/pois_save.eps>
- [6]
-File: image/logit_save.eps Graphic file (type eps)
-<image/logit_save.eps>
-File: image/cos_save.eps Graphic file (type eps)
-<image/cos_save.eps>
- [7]
-File: image/compare_save_one.eps Graphic file (type eps)
-<image/compare_save_one.eps>
-File: image/compare_dim_save.eps Graphic file (type eps)
-<image/compare_dim_save.eps>
- [8]) (./iht.tex [9]
-File: image/norm_iht.eps Graphic file (type eps)
-<image/norm_iht.eps>
-File: image/logit_save.eps Graphic file (type eps)
-<image/logit_save.eps>
- [10]
+[1
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 36.
-
-File: image/cos_sin_iht.eps Graphic file (type eps)
-<image/cos_sin_iht.eps>
-[11]) [12] (./all.aux)
-Package rerunfilecheck Info: File `all.out' has not changed.
-(rerunfilecheck)             Checksum: EB44359A04B2D03D63E8A897B0A109E2;2250.
+] [2] (./fff.aux)
+Package rerunfilecheck Info: File `fff.out' has not changed.
+(rerunfilecheck)             Checksum: F780732FF08D30189157898D23C24E87;761.
  ) 
 Here is how much of TeX's memory you used:
- 21144 strings out of 477401
- 401456 string characters out of 5833814
- 993376 words of memory out of 5000000
- 40292 multiletter control sequences out of 15000+600000
- 571528 words of font info for 88 fonts, out of 8000000 for 9000
+ 21024 strings out of 477401
+ 398860 string characters out of 5833814
+ 992433 words of memory out of 5000000
+ 40205 multiletter control sequences out of 15000+600000
+ 554225 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,9n,135p,400b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,9n,135p,392b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on all.pdf (12 pages).
+Output written on fff.pdf (2 pages).

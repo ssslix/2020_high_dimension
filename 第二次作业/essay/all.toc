@@ -14,7 +14,8 @@
 \contentsline {subsection}{\numberline {2.7}总结}{9}{subsection.2.7}%
 \contentsline {section}{\numberline {3}IHT}{9}{section.3}%
 \contentsline {subsection}{\numberline {3.1}理论依据}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}线性回归模型}{9}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}对数似然回归}{10}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}$\qopname \relax o{cos}$与$\qopname \relax o{sin}$函数关系}{11}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}三角函数在IHT与PHD下降维效果的对比}{11}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.2}算法流程}{9}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}线性回归模型}{10}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}对数似然回归}{10}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}$\qopname \relax o{cos}$与$\qopname \relax o{sin}$函数关系}{11}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}三角函数在IHT与PHD下降维效果的对比}{12}{subsection.3.6}%
