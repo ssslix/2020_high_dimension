@@ -1,14 +1,18 @@
 \documentclass[cn]{elegantpaper}
 \author{邵李翔\quad 赵张弛 \quad 祖劭康}
 \title{线性回归,岭回归以及Lasso回归}
-
+\date{}
+\usepackage{float}
 \begin{document}
     
 \maketitle
+\begin{abstract}
+  我们采用Boston数据集，使用线性回归、lasso、岭回归三种方式进行建模，以数据集中的medv变量为响应变量，其余13个变量为预测变量，探究之间的线性关系。并比较三种模型求解出来的系数，分析三种方法的优缺点。
+\end{abstract}
 \section{数据集描述}
 本次实验采用的数据集为Boston (波士顿房价)数据集，它记录了波士顿周围 506 个街区的 medv
 (房价中位数)。我们将设法用 13 个预测变量如 rm (每栋住宅的平均房间数)， age (平均房
-龄)， lstat (社会经济地位低的家庭所占比例)等来预测 medv (房价中位数)。
+龄)， lstat (社会经济地位低的家庭所占比例)等来预测 medv (房价中位数)。下表是部分数据集展示。
 \begin{table}[ht]
     \centering
     \caption{数据集中部分数据展示}
@@ -24,8 +28,8 @@
 \end{table}
 
 \section{线性回归}
-使用$lm()$函数对所有预测变量进行多元回归,得到的结果如下
-\begin{table}[ht]
+由于最小二乘法求解线性模型参数能直接得到解析解，所以我们对所有预测变量进行多元回归,得到的结果如表2。由各个预测变量对应的系数的值可以看出来，有些变量比如black，age等系数绝对值小于0.01，可以说与响应变量——房价中位数关系不大，而且表格第五列是系数显著性检验的结果，比如indus、age对应的p值显然是表明接受原假设，认为该变量的系数应该等于0。说明线性回归在某些数据集上还存在一定的局限性。
+\begin{table}[H]
     \centering
     \caption{多元线性回归拟合结果}
     \begin{tabular}{rrrrr}
@@ -50,9 +54,11 @@
     \end{tabular}
 \end{table}
 
+\input{lasso.tex}
 \input{ridge.tex}
 
-
+\section{总结}
+对于Boston数据集直接采用线性回归进行参数估计效果并不好，我们分别采用lasso回归与岭回归方法同样对该数据集进行参数估计，lasso具有变量选择的效果，而且基于最小角回归算法得到的lasso估计参数比我们自己采用循环坐标下降法计算得到的参数效果好。而岭回归具有压缩系数的作用，但无法将系数压缩到0。
 
 
 

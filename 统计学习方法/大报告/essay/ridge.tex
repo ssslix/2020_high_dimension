@@ -1,9 +1,10 @@
 \section{岭回归}
 \subsection{自己实现的岭回归与自带包实现的岭回归}
-选取超参数$\lambda$为$0.01$,使用两种不同的代码实现岭回归,得到模型中的参数如下表所示
+这里我们先比较自己实现的岭回归的参数估计与自带包实现的参数。首先选取超参数$\lambda$为$0.01$,使用两种不同的代码实现岭回归,得到模型中的参数如下表。我们可以看到两者系数相差无几，而之前lasso自己编写的代码和自带包估计的系数差距较大，我们分析认为是岭回归同样能得到模型的解析解，可以直接用数据来计算得到每个超参数下系数的最优估计，所以在岭回归方面，我们自己编写的岭回归参数估计与R中自带包计算的效果几乎相同。
 
 \begin{table}[htbp]
 \centering
+\caption{自己编写与R包用岭回归方法估计系数的结果}
 \begin{tabular}{ccccccccccccccc}
   \hline
  & 截距项 & crim & zn & indus & chas & nox & rm & age & dis & rad & tax & ptratio & black & lstat \\ 
@@ -16,23 +17,23 @@
 
 \subsection{基于交叉验证选择最佳参数}
 
-自动选择参数$\lambda$值的范围进行岭回归,选择在 $\lambda =1$到 $\lambda = 10^{-3}$的范围内进行岭回归,如图所示可得每个变量的系数随着参数$\lambda$变化所得到的曲线.
+自动选择参数$\lambda$值的范围进行岭回归,选择在 $\lambda =10^{-3}$到 $\lambda = 10$的范围内进行岭回归,如图所示可得每个变量的系数随着参数$\lambda$变化所得到的曲线.该图上方的13是系数个数，而下方10，15，20，25是每个$\lambda$的值对应的各变量参数的绝对值之和。我们可以从图的左端看出，即使各个变量系数的值都接近到0，但在图像上方对应的值仍为13，说明岭回归没有变量选择的作用，只会随着$\lambda$值增加，而压缩各变量系数的值。
 \begin{figure}[htbp]
   \centering
-  \caption{系数变化曲线}
   \includegraphics[width=0.8\textwidth]{opt_para.eps}
+  \caption{系数变化曲线}
 \end{figure}
 
-将数据分为10折,使用交叉验证法选择调节参数$\lambda$,得到系数变化曲线如下图所示
+将数据分为10折,使用交叉验证法选择调节参数$\lambda$,得到系数变化曲线如图3所示
 \begin{figure}[htbp]
   \centering
-  \caption{交叉验证法的系数变化曲线}
   \includegraphics[width=0.6\textwidth]{cv_para.eps}
+  \caption{交叉验证法的系数变化曲线}
 \end{figure}
 
-分别选取$\lambda$的LSE值以及最小的$\lambda$值下的变量系数,如下图所示
+我们分别选取$\lambda$的LSE值以及最小的$\lambda$值下的变量系数,结果如图4所示，数据第一列是$\lambda$的LSE值对应的变量系数，第二列是CV准则下最小MSE的$\lambda$值下的变量系数。
 \begin{figure}[htbp]
   \centering
-  \caption{两个$\lambda$值下的系数}
   \includegraphics[width=0.6\textwidth]{coef.jpg}
+  \caption{两个$\lambda$值下的系数}
 \end{figure}

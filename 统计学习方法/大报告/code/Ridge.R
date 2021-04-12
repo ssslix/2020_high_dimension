@@ -3,7 +3,7 @@ library(glmnet)
 x <- model.matrix(medv~.,Boston)[,-1]
 y <- Boston$medv
 
-grid=10^seq(1,-3 ,length=100)
+grid=10^seq(-3,10 ,length=100)
 ridge.mod=glmnet(x,y,alpha=0,lambda=grid)
 coef(ridge.mod)[,100]
 coef(ridge.mod)[,1]
