@@ -1,4 +1,5 @@
 library(MASS)
+library(xtable)
 X <- model.matrix(medv~.,Boston)[,-1]
 y <- Boston$medv
 n <- dim(X)[1];p <- dim(X)[2]
@@ -13,3 +14,4 @@ coef
 
 lr <- lm.ridge(medv~.,data= Boston,lambda = 0.01,model=TRUE)
 lr
+
