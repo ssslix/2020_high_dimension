@@ -1,16 +1,15 @@
-
-p=3
-n=100
+library(MASS)
+X <- model.matrix(medv~.,Boston)[,-1]
+y <- Boston$medv
+n <- dim(X)[1];p <- dim(X)[2]
 alpha=0.01
-beta = rep(1,p)#初始化beta 设为m维全为1
-X=matrix(nrow=p,ncol=n)#初始化样本
-y = rep(0,n)
-for(j in 1:n)#按正态分布生成数据y
-{
-  X[,j]=runif(p,min=-1,max=1)
-  lambda=beta%*%X[,j]
-  y[j]=rnorm(1,lambda,1)+rnorm(1,1,0.1)
-}
+X <- cbind(rep(1,n),X)
+X <- t(X)
 
-coef=solve(X%*%t(X)+alpha*diag(p))%*%X%*%y
+
+
+coef=solve(X%*%t(X)+alpha*diag(p+1))%*%X%*%y
 coef
+
+lr <- lm.ridge(medv~.,data= Boston,lambda = 0.01,model=TRUE)
+lr
