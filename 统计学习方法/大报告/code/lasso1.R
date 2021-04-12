@@ -1,18 +1,14 @@
 library(msgps)
 library(lars)
-p=10
-n=100
-X=matrix(nrow=p,ncol=n)#初始化样本
+library(MASS)
+X <- model.matrix(medv~.,Boston)[,-1]
+y <- Boston$medv
+n <- dim(X)[1];p <- dim(X)[2]
 
-y = rep(0,n)
+
 y1 = rep(0,n)
-beta =  rbinom(p,1,0.4)*rbinom(p,10,0.7)#初始化真实参数beta
-for(j in 1:n)#按正态分布生成数据y
-{
-  X[,j]=rnorm(p,0,1)
-  lambda=beta%*%X[,j]
-  y[j]=beta%*%X[,j]+rnorm(1,0,0.1)
-}
+
+
 ##读取实际数据 糖尿病代码 X10维，p 1维，清空工作区，注释以上代码并注释最后第三行print（beta）
 # data(diabetes)
 # 
@@ -20,14 +16,9 @@ for(j in 1:n)#按正态分布生成数据y
 # X=t(x)
 # n=ncol(X)
 # p=10
+X = t(X)
 
-X_new=matrix(nrow=p,ncol=n)
-y=y-mean(y)
-X=X-rowMeans(X)
-coef=solve(X%*%t(X))%*%X%*%y
 #给出初始wi，转换X数据
-##给出超参数gamma=-1,-0.5,-2
-gamma=1
 
 ##对转换后的数据做LASSO
 ##设超参数lambda
@@ -58,14 +49,12 @@ cd<-function(){
   return( beta_hat)
 }
 beta_hat_1=cd()
+
+
 ##R自带函数结果
-alasso<-msgps(t(X),y,penalty="alasso",gamma=1,lambda=lambda,intercept=FALSE)
-fit<-summary(alasso);
-beta_hat_2<-fit$dfcp_result$coef
-##结果比较
-names(beta) <-  row.names(X)
-names(beta_hat_1) <-  row.names(X)
-names(beta_hat_2) <-  row.names(X)
-print(beta)
-print(beta_hat_1)
-print(as.vector(beta_hat_2))
+
+lar1 <- lars(t(X),y,type = "lasso")
+beta_hat_1
+beta_hat_2 <- lar1$beta
+summary(lar1)
+beta_hat_2
