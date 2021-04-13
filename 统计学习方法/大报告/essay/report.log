@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.22)  13 APR 2021 23:31
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/W32TeX) (preloaded format=xelatex 2020.3.22)  13 APR 2021 23:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1271,76 +1271,4 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 7.3pt on input line 19.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 19.
-
-Overfull \hbox (9.1752pt too wide) in paragraph at lines 19--28
- [][] 
- []
-
-[1
-
-] (./lasso.tex
-LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <12> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 2.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\lambda' on input line 9.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 9.
-
-File: lassocv.eps Graphic file (type eps)
-<lassocv.eps>
-
-Overfull \hbox (39.02498pt too wide) in paragraph at lines 22--28
- [][] 
- []
-
-[2] [3]) (./ridge.tex
-Overfull \hbox (46.25497pt too wide) in paragraph at lines 15--23
- [][] 
- []
-
-File: image/opt_para.eps Graphic file (type eps)
-<image/opt_para.eps>
-File: image/cv_para.eps Graphic file (type eps)
-<image/cv_para.eps>
-File: image/coef.jpg Graphic file (type bmp)
-<image/coef.jpg>
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 45.
-) [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
- [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
- (./report.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 76.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
-
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: F449C7E11D48002F2D4D08902182D67F
-(rerunfilecheck)             After:  23E1F097F81F9F043A7ACBF01B566D84.
- ) 
-Here is how much of TeX's memory you used:
- 30691 strings out of 493936
- 581925 string characters out of 6161408
- 896248 words of memory out of 5000000
- 34241 multiletter control sequences out of 15000+600000
- 600595 words of font info for 152 fonts, out of 8000000 for 9000
- 740 hyphenation exceptions out of 8191
- 66i,10n,124p,820b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
-
-Output written on report.pdf (6 pages).
+(Font)              sc
