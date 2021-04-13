@@ -1,4 +1,11 @@
 \section{Lasso}
+   \subsection{模型介绍}
+   Lasso在基础的线性回归模型的损失函数上，增加了L1正则项，假设有p个预测变量，此时Lasso损失函数如下:
+   \begin{equation}
+    \sum_{i=1}^n(y_i-\beta^Tx_i)^2+\lambda\sum_{j=1}^p|\beta_j|
+   \end{equation}
+   这里$\lambda$是超参数。
+   
     \subsection{超参数$\lambda$选择}
     调用R语言glmnet包，实现Lasso Regression，将数据分成十份，计算不同超参数$\lambda$下交叉验证(Cross Validation)的误差，并选择最优的超参数，结果如图1所示
     \begin{figure}[htbp]
