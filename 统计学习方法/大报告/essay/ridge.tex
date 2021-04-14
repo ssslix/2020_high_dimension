@@ -24,10 +24,15 @@
 
 \subsection{基于交叉验证选择最佳参数}
 
-自动选择参数$\lambda$值的范围进行岭回归,选择在 $\lambda =10^{-3}$到 $\lambda = 10$的范围内进行岭回归,如图所示可得每个变量的系数随着参数$\lambda$变化所得到的曲线.该图上方的13是系数个数，而下方10，15，20，25是每个$\lambda$的值对应的各变量参数的绝对值之和。我们可以从图的左端看出，即使各个变量系数的值都接近到0，但在图像上方对应的值仍为13，说明岭回归没有变量选择的作用，只会随着$\lambda$值增加，而压缩各变量系数的值。
+自动选择参数$\lambda$值的范围进行岭回归,选择在 $\lambda =10^{-3}$到 $\lambda = 10$的范围内进行岭回归,如图所示可得每个变量的系数随着参数$\lambda$变化所得到的曲线.该图上方的13是系数个数，X轴为$\log \lambda$的值。我们可以从图的左端看出，即使各个变量系数的值都接近到0，但在图像上方对应的值仍为13，说明岭回归没有变量选择的作用，只会随着$\lambda$值增加，而压缩各变量系数的值。
+% \begin{figure}[htbp]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{opt_para.eps}
+%   \caption{系数变化曲线}
+% \end{figure}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{opt_para.eps}
+  \includegraphics[width=0.8\textwidth]{lam_ridge.eps}
   \caption{系数变化曲线}
 \end{figure}
 

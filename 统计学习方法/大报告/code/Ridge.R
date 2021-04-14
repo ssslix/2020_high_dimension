@@ -8,6 +8,7 @@ ridge.mod=glmnet(x,y,alpha=0,lambda=grid)
 coef(ridge.mod)[,100]
 coef(ridge.mod)[,1]
 plot(ridge.mod)
+plot(ridge.mod,xvar="lambda",label=T)
 
 
 set.seed(512)
